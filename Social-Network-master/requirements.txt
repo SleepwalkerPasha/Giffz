@@ -1,0 +1,14 @@
+Django==3.0.7
+django-modeltranslation==0.18.2
+idna==3.3
+Pillow==9.1.0
+psycopg2==2.8.5
+psycopg2-binary==2.8.5
+requests==2.27.1
+six==1.16.0
+sqlparse==0.4.2
+tzdata==2022.1
+urllib3==1.26.9
+asgiref==3.5.1
+certifi==2021.10.8
+charset-normalizer==2.0.12

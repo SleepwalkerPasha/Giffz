@@ -1,0 +1,256 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-05-20 09:49+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: .\bffbook\settings.py:126
+msgid "Russian"
+msgstr "Русский"
+
+#: .\bffbook\settings.py:127
+msgid "English"
+msgstr "English"
+
+#: .\posts\templates\posts\confirm_del.html:4
+msgid "Delete post"
+msgstr "Удалить пост"
+
+#: .\posts\templates\posts\confirm_del.html:23
+msgid "Delete post?"
+msgstr "Удалить пост?"
+
+#: .\posts\templates\posts\confirm_del.html:26
+msgid "Are you sure you want to delete the post?"
+msgstr "Вы уверены, что хотите удалить этот пост?"
+
+#: .\posts\templates\posts\confirm_del.html:27
+msgid "Submit"
+msgstr "Подтвердить"
+
+#: .\posts\templates\posts\main.html:4
+msgid "Main page"
+msgstr "Главная"
+
+#: .\posts\templates\posts\main.html:17 .\posts\templates\posts\update.html:13
+#: .\profiles\templates\profiles\myprofile.html:28
+msgid "Update"
+msgstr "Редактировать"
+
+#: .\posts\templates\posts\main.html:18
+msgid "Delete"
+msgstr "Удалить"
+
+#: .\posts\templates\posts\main.html:51
+#, fuzzy
+#| msgid "Like"
+msgid "Likes"
+msgstr "Лайк"
+
+#: .\posts\templates\posts\main.html:67
+msgid "Post added"
+msgstr "Запись добавлена"
+
+#: .\posts\templates\posts\main.html:72
+msgid "Send"
+msgstr "Отправить"
+
+#: .\posts\templates\posts\update.html:4 .\posts\templates\posts\update.html:9
+msgid "Update post"
+msgstr "Редактировать запись"
+
+#: .\profiles\templates\profiles\detail.html:16
+msgid "Posts"
+msgstr "Запись"
+
+#: .\profiles\templates\profiles\detail.html:20
+msgid "Likes given"
+msgstr "Поставил Лайков"
+
+#: .\profiles\templates\profiles\detail.html:24
+msgid "Likes received"
+msgstr "Получил лайков"
+
+#: .\profiles\templates\profiles\detail.html:28
+#: .\templates\main\navbar.html:23
+msgid "Friends"
+msgstr "Друзья"
+
+#: .\profiles\templates\profiles\detail.html:37
+#: .\profiles\templates\profiles\profile_list.html:30
+msgid "Add to friends"
+msgstr "Добавить в друзья"
+
+#: .\profiles\templates\profiles\detail.html:42
+#: .\profiles\templates\profiles\profile_list.html:35
+msgid "Waiting for approval"
+msgstr "Ожидает подтверждения"
+
+#: .\profiles\templates\profiles\detail.html:49
+#: .\profiles\templates\profiles\profile_list.html:42
+msgid "Remove from friends"
+msgstr "Удалить из друзей"
+
+#: .\profiles\templates\profiles\detail.html:62
+msgid "No posts of this user"
+msgstr "Нет записей у пользователя"
+
+#: .\profiles\templates\profiles\my_invites.html:10
+msgid "No invitations here"
+msgstr "Нет запросов"
+
+#: .\profiles\templates\profiles\my_invites.html:25
+#: .\profiles\templates\profiles\profile_list.html:23
+msgid "See profile"
+msgstr "Посмотреть профиль"
+
+#: .\profiles\templates\profiles\my_invites.html:32
+msgid "Accept invite"
+msgstr "Принять запрос"
+
+#: .\profiles\templates\profiles\my_invites.html:40
+msgid "Reject invite"
+msgstr "Отклонить запрос"
+
+#: .\profiles\templates\profiles\myprofile.html:13
+msgid "Update your Profile"
+msgstr "Редактировать свой профиль"
+
+#: .\profiles\templates\profiles\myprofile.html:20
+msgid "Provide some additional/ the newest info about you"
+msgstr "Добавьте дополнительную / новую информацию о себе"
+
+#: .\profiles\templates\profiles\profile_list.html:4
+msgid "All profiles"
+msgstr "Все профили"
+
+#: .\profiles\templates\profiles\profile_list.html:10
+msgid "No profiles to interact with"
+msgstr "Нет профилей"
+
+#: .\profiles\templates\profiles\to_invite_list.html:4
+msgid "invite friends"
+msgstr "Пригласить друзей"
+
+#: .\templates\main\home.html:4
+msgid "Home page"
+msgstr "Домашняя"
+
+#: .\templates\main\login.html:9
+msgid "Login Form"
+msgstr "Авторизация"
+
+#: .\templates\main\login.html:10 .\templates\main\login.html:39
+#: .\templates\main\navbar.html:76
+msgid "Login"
+msgstr "Логин"
+
+#: .\templates\main\login.html:20
+msgid "Username"
+msgstr "Имя пользователя"
+
+#: .\templates\main\login.html:21
+#, fuzzy
+#| msgid "Username"
+msgid "Enter username"
+msgstr "Введите имя пользователя"
+
+#: .\templates\main\login.html:24
+msgid "At least 2 characters long"
+msgstr "Минимум длиной в 2 символа"
+
+#: .\templates\main\login.html:25
+msgid "Must only contains letters and first uppercase letter"
+msgstr "Содержит первую заглавную и строчные символы на латинице"
+
+#: .\templates\main\login.html:28
+msgid "Password"
+msgstr "Пароль"
+
+#: .\templates\main\login.html:29
+#, fuzzy
+#| msgid "Password"
+msgid "Enter Password"
+msgstr "Введите пароль"
+
+#: .\templates\main\login.html:32
+msgid "At least 8 characters long (and less than 100 characters)"
+msgstr "Минимум 8 символов и максимум 100"
+
+#: .\templates\main\login.html:33
+msgid "Contains at least 1 number"
+msgstr "Хотя бы 1 число"
+
+#: .\templates\main\login.html:34
+msgid "Contains at least 1 lowercase letter"
+msgstr "Хотя бы 1 символ нижнего регистра"
+
+#: .\templates\main\login.html:35
+msgid "Contains at least 1 uppercase letter"
+msgstr "Хотя бы 1 символ верхнего регистра"
+
+#: .\templates\main\login.html:36
+msgid "Contains a special character (e.g. @ !)"
+msgstr "Хотя бы 1 специальный символ (@ !)"
+
+#: .\templates\main\login.html:41
+msgid "Remember me"
+msgstr "Запомнить"
+
+#: .\templates\main\login.html:46
+msgid "Cancel"
+msgstr "Отмена"
+
+#: .\templates\main\login.html:47
+msgid "Forgot"
+msgstr "Забыли"
+
+#: .\templates\main\login.html:47
+msgid "password?"
+msgstr "пароль?"
+
+#: .\templates\main\navbar.html:16
+msgid "Board"
+msgstr "Лента"
+
+#: .\templates\main\navbar.html:27
+msgid "All Profiles"
+msgstr "Все профили"
+
+#: .\templates\main\navbar.html:30
+msgid "Send Invites"
+msgstr "Отправленные запросы"
+
+#: .\templates\main\navbar.html:33
+msgid "Received Invites"
+msgstr "Полученные запросы"
+
+#: .\templates\main\navbar.html:41
+#, fuzzy
+#| msgid "Remove from friends"
+msgid "name of a friend"
+msgstr "Имя друга"
+
+#: .\templates\main\navbar.html:43
+msgid "Search"
+msgstr "Поиск"
+
+#: .\templates\main\navbar.html:72
+msgid "Logout"
+msgstr "Выйти"

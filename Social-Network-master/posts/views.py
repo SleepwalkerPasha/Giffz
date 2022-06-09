@@ -2,10 +2,9 @@ from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
 from .models import Post, Like
 from profiles.models import Profile
-from .forms import PostModelForm, CommentModelForm
+from .forms import PostModelForm
 from django.views.generic import UpdateView, DeleteView
 from django.contrib import messages
-from django.http import JsonResponse
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 
@@ -19,7 +18,6 @@ def post_comment_create_and_list_view(request):
 
     # initials
     p_form = PostModelForm()
-    c_form = CommentModelForm()
     post_added = False
 
     profile = Profile.objects.get(user=request.user)
@@ -34,20 +32,10 @@ def post_comment_create_and_list_view(request):
             p_form = PostModelForm()
             post_added = True
 
-    if 'submit_c_form' in request.POST:
-        c_form = CommentModelForm(request.POST)
-        if c_form.is_valid():
-            instance = c_form.save(commit=False)
-            instance.user = profile
-            instance.post = Post.objects.get(id=request.POST.get('post_id'))
-            instance.save()
-            c_form = CommentModelForm()
-
     context = {
         'qs': qs,
         'profile': profile,
         'p_form': p_form,
-        'c_form': c_form,
         'post_added': post_added,
     }
 
@@ -80,12 +68,6 @@ def like_unlike_post(request):
             post_obj.save()
             like.save()
 
-        # data = {
-        #     'value': like.value,
-        #     'likes': post_obj.liked.all().count()
-        # }
-
-        # return JsonResponse(data, safe=False)
     return redirect('posts:main-post-view')
 
 

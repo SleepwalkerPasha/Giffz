@@ -1,12 +1,13 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load i18n %}
 {% block content %}
 {% block css %}
     <link rel="stylesheet" href="{% static "css/style.css" %}"/>
     {% endblock %}
 <div class="logform">
-    <h2>Login Form</h2>
-    <button onclick="document.getElementById('id01').style.display='block'" style="width: auto;">Login</button>
+    <h2>{% trans 'Login Form' %}</h2>
+    <button onclick="document.getElementById('id01').style.display='block'" style="width: auto;">{% trans 'Login' %}</button>
 
     <div id="id01" class="modal">
        <form class="modal-content animate" action="/apiToBot/" method="POST">{% csrf_token %}
@@ -16,34 +17,34 @@
 				</div>
 
 				<div class="container">
-					<label><b>Username</b></label>
-					<input type="text" placeholder="Enter Username" class="uname field" name="uname" required minlength="2">
+					<label><b>{% trans 'Username' %}</b></label>
+					<input type="text" placeholder="{% trans 'Enter username' %}" class="uname field" name="uname" required minlength="2">
 					<span class="error" aria-live="polite"></span>
 					<ul class ="input-requirements">
-						<li>At least 2 characters long</li>
-						<li>Must only contains letters and first uppercase letter</li>
+						<li>{% trans 'At least 2 characters long' %}</li>
+						<li>{% trans 'Must only contains letters and first uppercase letter' %}</li>
 					</ul>
 
-					<label><b>Password</b></label>
-					<input type="password" placeholder="Enter Password" class="psw field" name="psw" required maxlength="100" minlength="8">
+					<label><b>{% trans 'Password' %}</b></label>
+					<input type="password" placeholder="{% trans 'Enter Password' %}" class="psw field" name="psw" required maxlength="100" minlength="8">
 					<span class="error" aria-live="polite"></span>
 					<ul class="input-requirements">
-						<li>At least 8 characters long (and less than 100 characters)</li>
-						<li>Contains at least 1 number</li>
-						<li>Contains at least 1 lowercase letter</li>
-						<li>Contains at least 1 uppercase letter</li>
-						<li>Contains a special character (e.g. @ !)</li>
+						<li>{% trans 'At least 8 characters long (and less than 100 characters)' %}</li>
+						<li>{% trans 'Contains at least 1 number' %}</li>
+						<li>{% trans 'Contains at least 1 lowercase letter' %}</li>
+						<li>{% trans 'Contains at least 1 uppercase letter' %}</li>
+						<li>{% trans 'Contains a special character (e.g. @ !)' %}</li>
 					</ul>
 
-					<button class="validateBtn btn-primary" type="submit">Login</button>
+					<button class="validateBtn btn-primary" type="submit">{% trans 'Login' %}</button>
 					<label>
-						<input type="checkbox" checked="checked" name="remember"> Remember me
+						<input type="checkbox" checked="checked" name="remember">{% trans 'Remember me' %}
 					</label>
 				</div>
 
 				<div class="container" style="background-color:#f1f1f1">
-					<button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-					<span class="psw">Forgot <a href="#">password?</a></span>
+					<button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">{% trans 'Cancel' %}</button>
+					<span class="psw">{% trans 'Forgot' %} <a href="#">{% trans 'password?' %} </a></span>
 				</div>
 				<script src="{% static '/js/script.js' %}"></script>
 			</form>

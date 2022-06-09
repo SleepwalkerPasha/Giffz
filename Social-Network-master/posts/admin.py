@@ -1,7 +1,14 @@
 from django.contrib import admin
-from .models import Post, Comment, Like
-# Register your models here.
+from .models import Post, Like
+from modeltranslation.admin import TranslationAdmin
 
-admin.site.register(Post)
-admin.site.register(Comment)
-admin.site.register(Like)
+
+# Register your models here.
+@admin.register(Post)
+class PostAdmin(TranslationAdmin):
+    pass
+
+
+@admin.register(Like)
+class LikeAdmin(TranslationAdmin):
+    pass

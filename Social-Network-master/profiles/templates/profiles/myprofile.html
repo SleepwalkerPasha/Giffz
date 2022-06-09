@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
-
+{% load i18n %}
 {% block title %}
-my profile
+{% trans 'My profile' %}
 {% endblock title %}
 
 {% block content %}
@@ -10,14 +10,14 @@ my profile
 <div class="ui modal mymodal">
   <i class="close icon"></i>
   <div class="header">
-    Update your Profile
+   {% trans 'Update your Profile' %}
   </div>
   <div class="image content">
     <div class="ui medium image">
       <img src="{{profile.avatar.url}}">
     </div>
     <div class="description">
-      <div class="ui header">Provide some additional/newest info about you </div>
+      <div class="ui header">{% trans 'Provide some additional/ the newest info about you' %}</div>
      <form action="" method="POST" class="ui form" enctype='multipart/form-data'>
         {% csrf_token %}
         {{form.as_p}}
@@ -25,7 +25,7 @@ my profile
   </div>
   <div class="actions">
     <button type='submit' class="ui positive right labeled icon button">
-      Update
+      {% trans 'Update' %}
       <i class="checkmark icon"></i>
     </button>
     </form>
@@ -36,7 +36,7 @@ my profile
 
 <div class="ui segment">
     {% if confirm %}
-        <div class="ui green message">Your profile has been updated</div>
+        <div class="ui green message">{% trans 'Your profile has been updated' %}</div>
     {% endif %}
     <h3>my profile: {{request.user}}</h3>
     <div class="ui grid">
@@ -44,34 +44,34 @@ my profile
             <div class='six wide column'>
                 <img class="ui medium rounded image" src={{profile.avatar.url}}>
                 <div class="row mt-5">
-                    <button class='ui secondary button' id='modal-btn'>Update your profile</button>
+                    <button class='ui secondary button' id='modal-btn'>{% trans 'Update your profile' %}</button>
                 </div>
             </div>
             <div class="ten wide column">
                 <table class="ui table">
                     <tbody>
                         <tr>
-                            <td>username</td>
+                            <td>{% trans 'Username' %}</td>
                             <td>{{profile.user}}</td>
                         </tr>
                         <tr>
-                            <td>first name</td>
+                            <td>{% trans 'First name' %}</td>
                             <td>{{profile.first_name}}</td>
                         </tr>
                         <tr>
-                            <td>last name</td>
+                            <td>{% trans 'Last name' %}</td>
                             <td>{{profile.last_name}}</td>
                         </tr>
                         <tr>
-                            <td>bio</td>
+                            <td>{% trans 'Bio' %}</td>
                             <td>{{profile.bio}}</td>
                         </tr>
                         <tr>
-                            <td>number of friends</td>
+                            <td>{% trans 'Number of friends' %}</td>
                             <td>{{profile.get_friends_no}}</td>
                         </tr>
                         <tr>
-                            <td>number of friends</td>
+                            <td>{% trans 'Number of friends' %}</td>
                             <td>
                                 <ul>
                                     {% for friend in profile.get_friends %}
@@ -81,15 +81,15 @@ my profile
                             </td>
                         </tr>
                         <tr>
-                            <td>number of posts</td>
+                            <td>{% trans 'Number of posts' %} </td>
                             <td>{{profile.get_posts_no}}</td>
                         </tr>
                         <tr>
-                            <td>number of likes given</td>
+                            <td>{% trans 'Number of likes given' %}</td>
                             <td>{{profile.get_likes_given_no}}</td>
                         </tr>
                         <tr>
-                            <td>number of likes received</td>
+                            <td>{% trans 'Number of likes received' %}</td>
                             <td>{{profile.get_likes_recieved_no}}</td>
                         </tr>
 

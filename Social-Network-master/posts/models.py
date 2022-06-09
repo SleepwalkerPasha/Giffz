@@ -1,5 +1,4 @@
 from django.db import models
-from django.core.validators import FileExtensionValidator
 from profiles.models import Profile
 
 
@@ -20,15 +19,6 @@ class Post(models.Model):
 
     def num_comments(self):
         return self.comment_set.all().count()
-
-
-class Comment(models.Model):
-    user = models.ForeignKey(Profile, on_delete=models.CASCADE)
-    post = models.ForeignKey(Post, on_delete=models.CASCADE)
-    body = models.TextField(max_length=300)
-
-    def __str__(self):
-        return str(self.pk)
 
 
 LIKE_CHOICES = (
